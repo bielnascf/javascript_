@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <div class="card-container">
+        <main class="card">
+            <form autocomplete="off">
+                <h1 class="title">Cálculo de IMC</h1>
+                <div class="input-wrapper">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="text" name="peso" id="peso" placeholder="XX.X">
+                </div>
+                <div class="input-wrapper">
+                    <label for="altura">Altura (cm)</label>
+                    <input type="text" name="altura" id="altura" placeholder="XXX">
+                </div>
+                <button id="calculateButton">
+                    Calcular IMC 
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <div class="modal-wrapper">
+        <div class="modal card">
+            <h2 class="title">Seu IMC é de 0</h2>
+            <span id="rank">Obesidade</span>
+            <button id="closeButton">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div class="alert-error">
+        <h3>Digite somente números</h3>
+    </div>
+</body>
+<script src="./js/main.js" type="module"></script>
+</html>

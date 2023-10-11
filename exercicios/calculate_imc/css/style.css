@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #040924;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, input, button {
+    font-size: 1.2rem;
+}
+
+
+.card-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.card {
+    padding: 2rem 3rem 3rem;
+    background-color: #ffffff;
+    max-width: 42.8rem;
+    margin-inline: auto;
+
+    box-shadow: 0 .2rem .4rem #0000001a;
+    border-radius: .6rem;
+
+}
+
+.title {
+    color: #003b4d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+label {
+    color: #003b4d;
+    width: fit-content;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+input {
+    padding: .6rem;
+    background-color: #DCE2E9;
+    border: 1px solid #b8b8b862;
+    border-radius: .4rem;
+}
+
+input:focus {
+    outline: 2px solid #02799D;
+}
+
+input::placeholder {
+    color: #aaaaaa8a;
+}
+
+#calculateButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: .4rem;
+
+    background-color: #02799D;
+    border: none;
+    border-radius: .5rem;
+    color: #ffffff;
+    font-weight: 700;
+
+    transition: background .3s ease-in-out;
+}
+
+#calculateButton:hover {
+    background-color: #01617e;
+    cursor: pointer;
+}
+
+/* modal */
+
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper {
+    position: absolute;
+    inset: 0;
+    background-color: #000000b3;
+
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+.modal {
+    position: relative;    
+}
+
+.modal span {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+#closeButton {
+    position: absolute;
+    top: .7rem;
+    right: .7rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: .5;
+
+    transition: all .3s ease-in-out;
+}
+
+#closeButton:hover {
+    transform: scale(1.1);
+}
+
+/* error */
+
+.alert-error.open {
+    opacity: 1;
+    visibility: visible;
+
+    animation: alertDown .5s ease-in;
+}
+
+@keyframes alertDown {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.alert-error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: .5rem 0;
+
+    text-align: center;
+    color: #fff;
+    font-size: bold;
+    background-color: #F03E3E;
+
+    opacity: 0;
+    visibility: hidden;
+}
